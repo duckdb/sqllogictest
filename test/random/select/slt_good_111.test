@@ -36655,6 +36655,7 @@ SELECT + ( - cor0.col1 ) * 11 * col1 + col2 col1 FROM tab2 AS cor0
 -38265
 
 skipif mysql # not compatible
+skipif duckdb # Statistical rounding
 query I rowsort
 SELECT + 82 + - ( + col0 ) / CAST ( col0 + + col0 AS REAL ) FROM tab2
 ----
