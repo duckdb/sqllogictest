@@ -57249,8 +57249,6 @@ SELECT DISTINCT * FROM tab0 WHERE NOT NULL BETWEEN NULL AND + - col2
 
 statement error
 SELECT 43 - MAX( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST( - col2 AS SIGNED ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
-----
-NULL
 
 query I rowsort
 SELECT ( + 47 ) AS col0 FROM tab2
