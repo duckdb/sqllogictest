@@ -57247,17 +57247,11 @@ query III rowsort
 SELECT DISTINCT * FROM tab0 WHERE NOT NULL BETWEEN NULL AND + - col2
 ----
 
-onlyif mysql # CAST syntax: aggregate syntax: SIGNED type: 
-query I rowsort label-6280
+statement error
 SELECT 43 - MAX( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST( - col2 AS SIGNED ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
-----
-NULL
 
-skipif mysql # not compatible
-query I rowsort label-6280
-SELECT 43 - MAX ( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST ( - col2 AS INTEGER ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
-----
-NULL
+statement error
+SELECT 43 - MAX( ALL - 87 + col1 ) FROM tab2 WHERE col1 * col1 * - CAST ( - col2 AS INTEGER ) * + - col0 * + - 77 * - col0 IS NOT NULL AND NOT + col0 BETWEEN 35 * - col2 AND NULL
 
 query I rowsort
 SELECT ( + 47 ) AS col0 FROM tab2
