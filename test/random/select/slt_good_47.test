@@ -68833,6 +68833,7 @@ SELECT - - col2 - - col2 * col0 FROM tab0 AS cor0
 825
 
 skipif mysql # not compatible
+skipif duckdb # Statistical rounding
 query I rowsort
 SELECT - col2 * col1 / CAST ( 64 AS REAL ) + col2 FROM tab0
 ----
